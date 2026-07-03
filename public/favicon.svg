@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
   <defs>
-    <linearGradient id="reality-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pulsenet-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FB7185"/>
       <stop offset="100%" stop-color="#A78BFA"/>
     </linearGradient>
   </defs>
   <rect width="100" height="100" fill="#0A0A0F" rx="20"/>
   <g transform="translate(20, 20)">
-    <path d="M0 0L50 0L50 35L25 35L25 70L0 70L0 0Z" fill="url(#reality-gradient)"/>
-    <path d="M50 0L100 0L100 35L75 35L75 70L50 70L50 0Z" fill="none" stroke="#FB7185" stroke-width="4"/>
+    <circle cx="25" cy="25" r="20" fill="url(#pulsenet-gradient)" opacity="0.8"/>
+    <circle cx="25" cy="25" r="15" fill="url(#pulsenet-gradient)" opacity="0.6"/>
+    <circle cx="25" cy="25" r="10" fill="url(#pulsenet-gradient)"/>
+    <circle cx="25" cy="25" r="5" fill="#FFFFFF"/>
   </g>
 </svg>
