@@ -1,7 +1,7 @@
 {
-  "name": "reality-frontend",
+  "name": "pulsenet-frontend",
   "version": "1.0.0",
-  "description": "Reality Social App - React + TypeScript Frontend following RDL v2.0 Design System",
+  "description": "PulseNet Social App - React + TypeScript Frontend following RDL v2.0 Design System. A Dynamic Inc. project.",
   "private": true,
   "scripts": {
     "dev": "vite",
