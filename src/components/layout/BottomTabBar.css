@@ -1,0 +1,97 @@
+/* Bottom Tab Bar - RDL v2.0 Compliant */
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--color-background-secondary);
+  backdrop-filter: var(--backdrop-blur-md);
+  border-top: 1px solid var(--color-border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 var(--space-2);
+  z-index: var(--z-fixed);
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  color: var(--color-text-tertiary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  min-width: 64px;
+  cursor: pointer;
+}
+
+.tab-item:hover {
+  background: var(--color-background-elevated);
+}
+
+.tab-item.active {
+  color: var(--color-accent-ember);
+}
+
+.tab-item.active .tab-icon {
+  transform: scale(1.1);
+}
+
+.tab-icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+  transition: all var(--transition-normal);
+}
+
+.tab-label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+}
+
+/* FAB in center */
+.tab-fab {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-ember);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.tab-fab:hover {
+  background: color-mix(in srgb, var(--color-accent-ember), black 10%);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.tab-fab:active {
+  background: color-mix(in srgb, var(--color-accent-ember), black 20%);
+  transform: translateX(-50%) scale(0.95);
+}
+
+.tab-fab .tab-icon {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}
+
+/* Tab items with FAB */
+.tab-bar-with-fab .tab-item {
+  width: 20%;
+}
+
+.tab-bar-with-fab .tab-item:nth-child(3) {
+  display: none;
+}
