@@ -1,0 +1,502 @@
+/* 
+ * Reality Design Language (RDL) v2.0 - Design Tokens
+ * Enterprise-Grade | Production-Ready | Single Source of Truth
+ * 
+ * Color System: Semantic, theme-agnostic tokens
+ * Typography: Inter font family with responsive scaling
+ * Spacing: 8px base grid system
+ * Breakpoints: 8 responsive tiers (xs to 4xl)
+ */
+
+/* ============================================
+   CSS Custom Properties - Design Tokens
+   ============================================ */
+
+:root {
+  /* ========================================
+     1. COLOR TOKENS
+     ======================================== */
+  
+  /* Background Colors */
+  --color-background-primary: #0A0A0F;
+  --color-background-secondary: #1A1A24;
+  --color-background-tertiary: #16161E;
+  --color-background-elevated: #25252F;
+  --color-background-overlay: rgba(10, 10, 15, 0.8);
+  
+  /* Surface Colors */
+  --color-surface-primary: #1A1A24;
+  --color-surface-secondary: #25252F;
+  --color-surface-tertiary: #16161E;
+  --color-surface-glass: rgba(26, 26, 36, 0.8);
+  
+  /* Text Colors */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #F5F5F7;
+  --color-text-tertiary: #94A3B8;
+  --color-text-disabled: #6B7280;
+  --color-text-inverse: #0A0A0F;
+  
+  /* Border Colors */
+  --color-border-primary: rgba(255, 255, 255, 0.1);
+  --color-border-secondary: rgba(255, 255, 255, 0.05);
+  --color-border-tertiary: rgba(255, 255, 255, 0.2);
+  
+  /* Accent Colors */
+  --color-accent-ember: #FB7185;
+  --color-accent-glacier: #60A5FA;
+  --color-accent-jade: #34D399;
+  --color-accent-amethyst: #A78BFA;
+  --color-accent-amber: #FBBF24;
+  
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  
+  /* ========================================
+     2. OPACITY TOKENS
+     ======================================== */
+  
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-15: 0.15;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+  
+  /* Disabled opacity */
+  --opacity-disabled: 0.5;
+  --opacity-disabled-strong: 0.3;
+  
+  /* ========================================
+     3. Z-INDEX TOKENS (Layering System)
+     ======================================== */
+  
+  /* Background layer */
+  --z-background: -1;
+  
+  /* Content layers */
+  --z-content: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-drawer: 400;
+  
+  /* Overlay layers */
+  --z-backdrop: 450;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+  --z-loading: 900;
+  
+  /* Maximum */
+  --z-max: 9999;
+  
+  /* ========================================
+     4. BLUR TOKENS
+     ======================================== */
+  
+  --blur-none: 0;
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 12px;
+  --blur-xl: 16px;
+  --blur-2xl: 24px;
+  
+  /* Backdrop blur */
+  --backdrop-blur-sm: blur(4px);
+  --backdrop-blur-md: blur(8px);
+  --backdrop-blur-lg: blur(12px);
+  --backdrop-blur-xl: blur(16px);
+  
+  /* ========================================
+     5. GRADIENT TOKENS
+     ======================================== */
+  
+  /* Background gradients */
+  --gradient-background-primary: linear-gradient(180deg, #0A0A0F 0%, #1A1A24 100%);
+  --gradient-background-secondary: linear-gradient(180deg, #1A1A24 0%, #25252F 100%);
+  
+  /* Accent gradients */
+  --gradient-ember: linear-gradient(135deg, #FB7185 0%, #A78BFA 100%);
+  --gradient-glacier: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+  --gradient-jade: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  
+  /* Shimmer gradient */
+  --gradient-shimmer: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  
+  /* ========================================
+     6. TYPOGRAPHY TOKENS
+     ======================================== */
+  
+  /* Font Families */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  
+  /* Font Sizes (Mobile-first) */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 32px;
+  --text-5xl: 36px;
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* ========================================
+     7. SPACING TOKENS (8px Base Grid)
+     ======================================== */
+  
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-28: 112px;
+  --space-32: 128px;
+  --space-36: 144px;
+  --space-40: 160px;
+  --space-44: 176px;
+  --space-48: 192px;
+  
+  /* Responsive spacing */
+  --space-page-margin: var(--space-4);
+  --space-card-gap: var(--space-6);
+  --space-section-gap: var(--space-8);
+  
+  /* ========================================
+     8. BORDER RADIUS TOKENS
+     ======================================== */
+  
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+  
+  /* ========================================
+     9. SHADOW TOKENS
+     ======================================== */
+  
+  /* Light theme shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 15px 25px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+  
+  /* Dark theme shadows */
+  --shadow-sm-dark: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md-dark: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-lg-dark: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --shadow-xl-dark: 0 12px 24px rgba(0, 0, 0, 0.5);
+  --shadow-2xl-dark: 0 16px 32px rgba(0, 0, 0, 0.6);
+  
+  /* Colored shadows */
+  --shadow-ember: 0 4px 12px rgba(251, 113, 133, 0.3);
+  --shadow-glacier: 0 4px 12px rgba(96, 165, 250, 0.3);
+  
+  /* ========================================
+     10. ANIMATION TOKENS
+     ======================================== */
+  
+  /* Durations */
+  --duration-instant: 0.05s;
+  --duration-fast: 0.1s;
+  --duration-normal: 0.2s;
+  --duration-slow: 0.3s;
+  --duration-slower: 0.4s;
+  --duration-slowest: 0.5s;
+  --duration-entrance: 0.6s;
+  
+  /* Easing functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Transitions */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-normal: var(--duration-normal) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-out);
+  --transition-slower: var(--duration-slower) var(--ease-out);
+  --transition-spring: var(--duration-normal) var(--ease-spring);
+  
+  /* ========================================
+     11. ICON TOKENS
+     ======================================== */
+  
+  /* Sizes */
+  --icon-xs: 12px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 28px;
+  --icon-2xl: 32px;
+  --icon-3xl: 40px;
+  
+  /* Stroke */
+  --icon-stroke-sm: 1px;
+  --icon-stroke-md: 1.5px;
+  --icon-stroke-lg: 2px;
+  
+  /* Touch targets */
+  --icon-touch-xs: 36px;
+  --icon-touch-sm: 40px;
+  --icon-touch-md: 44px;
+  --icon-touch-lg: 48px;
+  --icon-touch-xl: 56px;
+  
+  /* ========================================
+     12. STATE TOKENS
+     ======================================== */
+  
+  /* State scale */
+  --state-active-scale: 0.95;
+  
+  /* State colors */
+  --state-loading-color: var(--color-accent-ember);
+  --state-empty-color: var(--color-text-tertiary);
+  --state-error-color: var(--color-error);
+  --state-success-color: var(--color-success);
+  --state-warning-color: var(--color-warning);
+  --state-info-color: var(--color-info);
+  
+  /* Focus outline */
+  --focus-outline: 2px solid var(--color-accent-glacier);
+  --focus-outline-offset: 2px;
+  
+  /* ========================================
+     13. SAFE AREA TOKENS
+     ======================================== */
+  
+  /* iOS safe areas */
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  
+  /* Fallback for non-iOS */
+  --safe-area-inset-top: 0;
+  --safe-area-inset-bottom: 0;
+  --safe-area-inset-left: 0;
+  --safe-area-inset-right: 0;
+}
+
+/* ============================================
+   LIGHT THEME TOKENS
+   ============================================ */
+
+[data-theme="light"] {
+  /* Background Colors */
+  --color-background-primary: #FFFFFF;
+  --color-background-secondary: #F8F9FA;
+  --color-background-tertiary: #F1F3F5;
+  --color-background-elevated: #E9ECEF;
+  --color-background-overlay: rgba(255, 255, 255, 0.8);
+  
+  /* Surface Colors */
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #F8F9FA;
+  --color-surface-tertiary: #F1F3F5;
+  --color-surface-glass: rgba(255, 255, 255, 0.8);
+  
+  /* Text Colors */
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #475569;
+  --color-text-tertiary: #64748B;
+  --color-text-disabled: #94A3B8;
+  --color-text-inverse: #FFFFFF;
+  
+  /* Border Colors */
+  --color-border-primary: #E2E8F0;
+  --color-border-secondary: #CBD5E1;
+  --color-border-tertiary: #94A3B8;
+  
+  /* Accent Colors */
+  --color-accent-ember: #FB7185;
+  --color-accent-glacier: #60A5FA;
+  --color-accent-jade: #34D399;
+  --color-accent-amethyst: #A78BFA;
+  --color-accent-amber: #FBBF24;
+  
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  
+  /* Background gradients */
+  --gradient-background-primary: linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%);
+  --gradient-background-secondary: linear-gradient(180deg, #F8F9FA 0%, #E9ECEF 100%);
+  
+  /* Shimmer gradient */
+  --gradient-shimmer: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    transparent 100%
+  );
+  
+  /* Shadows for light theme */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 15px 25px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Mobile-first approach */
+@media (min-width: 360px) { /* sm */
+  :root {
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+  }
+}
+
+@media (min-width: 428px) { /* md */
+  :root {
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+  }
+}
+
+@media (min-width: 768px) { /* lg */
+  :root {
+    --text-base: 17px;
+    --text-lg: 19px;
+    --text-xl: 22px;
+    --text-2xl: 28px;
+    --space-page-margin: var(--space-8);
+    --space-card-gap: var(--space-8);
+    --space-section-gap: var(--space-12);
+  }
+}
+
+@media (min-width: 1024px) { /* xl */
+  :root {
+    --text-base: 18px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-2xl: 30px;
+    --space-page-margin: var(--space-12);
+    --space-card-gap: var(--space-10);
+    --space-section-gap: var(--space-16);
+  }
+}
+
+@media (min-width: 1280px) { /* 2xl */
+  :root {
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area padding */
+.safe-area-top {
+  padding-top: var(--safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.safe-area-left {
+  padding-left: var(--safe-area-inset-left);
+}
+
+.safe-area-right {
+  padding-right: var(--safe-area-inset-right);
+}
