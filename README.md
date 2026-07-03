@@ -1,11 +1,11 @@
-# Reality - Social App Frontend
+# PulseNet - Social App Frontend
 
-A premium, friend-first social network built with React + TypeScript following RDL v2.0 Design System
+A premium, friend-first social network built with React + TypeScript following RDL v2.0 Design System. A Dynamic Inc. project.
 
 ## Features
 
 - Friend-First Experience: Prioritizes real connections over algorithms
-- User Control: Full control over your feed with Reality Tags
+- User Control: Full control over your feed with PulseNet Tags
 - Premium Design: Enterprise-grade design system (RDL v2.0)
 - Fully Responsive: Mobile, tablet, desktop, and foldable device support
 - Theme Support: Dark and light themes with seamless switching
@@ -15,7 +15,7 @@ A premium, friend-first social network built with React + TypeScript following R
 
 ## Project Structure
 
-reality-frontend/
+pulsenet-frontend/
 - public/
   - favicon.svg
 - src/
@@ -99,6 +99,9 @@ npm run lint
 - Email: david.caleb.vl@gmail.com
 - GitHub: @davidcalebvl-del
 - Portfolio: davidfixdigital.xyz
+- Company: Dynamic Inc.
+
+Copyright (c) Dynamic Inc. All rights reserved.
 
 Built with React, TypeScript, and RDL v2.0 Design System
 
