@@ -13,11 +13,6 @@ const footerLinks = {
     { path: '/privacy', name: 'Privacy Policy' },
     { path: '/terms', name: 'Terms of Service' }
   ],
-  social: [
-    { path: 'https://twitter.com', name: 'Twitter' },
-    { path: 'https://linkedin.com', name: 'LinkedIn' },
-    { path: 'https://github.com', name: 'GitHub' }
-  ]
 }
 
 function Footer() {
@@ -56,16 +51,6 @@ function Footer() {
               </ul>
             </div>
             
-            <div className="footer-column">
-              <h4>Social</h4>
-              <ul>
-                {footerLinks.social.map((link) => (
-                  <li key={link.path}>
-                    <a href={link.path} target="_blank" rel="noopener noreferrer">{link.name}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
         

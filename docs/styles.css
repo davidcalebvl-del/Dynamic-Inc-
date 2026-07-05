@@ -845,6 +845,49 @@ a:hover {
     background: var(--text-gray);
 }
 
+/* Form Styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.75rem 1rem;
+    background-color: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--text-white);
+    background-color: #1a1a1a;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--text-gray);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero-container {
