@@ -1,0 +1,74 @@
+/* Top Navigation Bar - RDL v2.0 Compliant */
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: var(--color-background-secondary);
+  backdrop-filter: var(--backdrop-blur-md);
+  border-bottom: 1px solid var(--color-border-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  z-index: var(--z-fixed);
+}
+
+.nav-bar-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-bar-action {
+  padding: var(--space-2);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-bar-action:hover {
+  background: var(--color-background-elevated);
+  color: var(--color-text-primary);
+}
+
+.nav-bar-action:active {
+  background: var(--color-background-secondary);
+  transform: scale(var(--state-active-scale));
+}
+
+.nav-bar-action .icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+/* Scroll behavior */
+.nav-bar-scrolled {
+  background: rgba(26, 26, 36, 0.95);
+  box-shadow: var(--shadow-md);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}

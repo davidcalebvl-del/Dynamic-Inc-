@@ -1,0 +1,170 @@
+/* Button Component - RDL v2.0 Compliant */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  border: none;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  appearance: none;
+}
+
+.btn:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+/* Primary Variant */
+.btn-primary {
+  background: var(--color-accent-ember);
+  color: var(--color-text-primary);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent-ember), black 10%);
+}
+
+.btn-primary:active:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent-ember), black 20%);
+  transform: scale(var(--state-active-scale));
+}
+
+/* Secondary Variant */
+.btn-secondary {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--color-background-elevated);
+  border-color: var(--color-border-secondary);
+}
+
+.btn-secondary:active:not(:disabled) {
+  background: var(--color-background-secondary);
+  transform: scale(var(--state-active-scale));
+}
+
+/* Tertiary Variant */
+.btn-tertiary {
+  background: transparent;
+  color: var(--color-accent-ember);
+}
+
+.btn-tertiary:hover:not(:disabled) {
+  background: rgba(251, 113, 133, 0.1);
+}
+
+.btn-tertiary:active:not(:disabled) {
+  background: rgba(251, 113, 133, 0.2);
+  transform: scale(var(--state-active-scale));
+}
+
+/* Ghost Variant */
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-primary);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--color-background-elevated);
+  border-color: var(--color-border-secondary);
+}
+
+/* Icon Variant */
+.btn-icon {
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 0;
+  border-radius: var(--radius-md);
+}
+
+.btn-icon:hover:not(:disabled) {
+  background: var(--color-background-elevated);
+  color: var(--color-text-primary);
+}
+
+.btn-icon:active:not(:disabled) {
+  transform: scale(var(--state-active-scale));
+}
+
+/* Floating Action Button */
+.btn-floating {
+  width: var(--icon-touch-lg);
+  height: var(--icon-touch-lg);
+  border-radius: var(--radius-full);
+  background: var(--color-accent-ember);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-lg);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-floating:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent-ember), black 10%);
+  transform: scale(1.05);
+}
+
+.btn-floating:active:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent-ember), black 20%);
+  transform: scale(0.95);
+}
+
+/* Link Variant */
+.btn-link {
+  background: transparent;
+  color: var(--color-accent-glacier);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-link:hover:not(:disabled) {
+  color: color-mix(in srgb, var(--color-accent-glacier), white 20%);
+}
+
+/* Sizes */
+.btn-xs { padding: var(--space-1-5) var(--space-3); min-width: 32px; font-size: var(--text-xs); }
+.btn-sm { padding: var(--space-2) var(--space-4); min-width: 40px; font-size: var(--text-sm); }
+.btn-md { padding: var(--space-3) var(--space-6); min-width: 48px; font-size: var(--text-base); }
+.btn-lg { padding: var(--space-4) var(--space-8); min-width: 56px; font-size: var(--text-lg); }
+.btn-xl { padding: var(--space-5) var(--space-10); min-width: 64px; font-size: var(--text-xl); }
+
+/* Loading State */
+.btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

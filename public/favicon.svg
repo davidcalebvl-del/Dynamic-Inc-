@@ -1,5 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="50" fill="#000000"/>
-  <path d="M25 20 C35 20, 45 25, 50 35 C55 25, 65 20, 75 20 C80 20, 85 25, 85 35 L85 65 C85 75, 80 80, 75 80 C65 80, 55 75, 50 65 C45 75, 35 80, 25 80 C20 80, 15 75, 15 65 L15 35 C15 25, 20 20, 25 20 Z" fill="#ffffff"/>
-  <path d="M45 40 L50 48 L55 40 L58 50 L50 55 L42 50 Z" fill="#000000"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="pulsenet-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="#0A0A0F" rx="20"/>
+  <g transform="translate(20, 20)">
+    <circle cx="25" cy="25" r="20" fill="url(#pulsenet-gradient)" opacity="0.8"/>
+    <circle cx="25" cy="25" r="15" fill="url(#pulsenet-gradient)" opacity="0.6"/>
+    <circle cx="25" cy="25" r="10" fill="url(#pulsenet-gradient)"/>
+    <circle cx="25" cy="25" r="5" fill="#FFFFFF"/>
+  </g>
 </svg>
