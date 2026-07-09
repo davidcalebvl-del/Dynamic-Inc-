@@ -642,6 +642,133 @@ a:hover {
     font-size: 0.85rem;
 }
 
+
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 4rem 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background-color: var(--bg-black);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+}
+
+.pricing-card:hover {
+    border-color: var(--text-white);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-description {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.pricing-amount {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pricing-amount .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-white);
+}
+
+.pricing-amount .period {
+    color: var(--text-gray);
+    font-size: 1rem;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features svg {
+    flex-shrink: 0;
+}
+
+.feature-included {
+    color: var(--text-white);
+}
+
+.feature-included svg {
+    color: #4ade80;
+    stroke: #4ade80;
+}
+
+.feature-excluded {
+    color: var(--text-gray);
+}
+
+.feature-excluded svg {
+    color: #f87171;
+    stroke: #f87171;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-white);
+    color: var(--bg-black);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.pricing-note {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.pricing-note p {
+    margin: 0.5rem 0;
+}
+
 /* Utility Classes */
 .text-center {
     text-align: center;
@@ -835,5 +962,23 @@ a:hover {
     .mobile-menu-close {
         top: 1rem;
         right: 1rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .pricing-card {
+        padding: 1.5rem;
+    }
+    
+    .pricing-amount .price {
+        font-size: 2rem;
+    }
+    
+    .pricing-features li {
+        padding: 0.5rem 0;
+        font-size: 0.9rem;
     }
 }
